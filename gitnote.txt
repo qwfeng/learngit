@@ -1,0 +1,25 @@
+1.创建一个版本库：
+$ mkdir "filename"  ：在git目录下创建一个空目录
+$ cd "filename"     ：调出文件地址
+$ pwd               : 显示位置
+2.通过git init命令把目录变成git可以管理的仓库：
+$ git init
+ 
+3.编写目录文件：
+   1.$ git add files.txt  #把文件添加到仓库
+   2.$ git commit -m "wrote a readme file"   #把文件提交到仓库，“”内的内容为提交时的备注，方便查找改动记录。
+4.文件处理：
+   1.$ git status    #查看结果
+   2.$ git diff      #查看具体修改的内容，进而确定文件是否足以提交
+5.
+   1.$ git log       #查看历史记录
+   2.$ git log -- pretty=oneline   #减少输出信息
+   3.$ git reset -- hard HEAD^     #将当前版本退回上一个版本
+   4.$ cat readme.txt              #查看当前文件内容
+   5.$ git reset -- hard +commit id关键字      #返回到退回前的版本
+   6.$ git reflog     #记录每一次命令
+6.管理修改：
+    1.$ git diff HEAD -- readme.txt     #查看工作区和版本库里面最新版本的区别
+	2.$ git checkout -- <file>...       #把readme.txt文件在工作区的修改全部撤销，
+	3.$ git reset HEAD <file>           #把暂存区的修改撤销掉（unstage），重新放回工作区
+刘梓凉是傻逼
