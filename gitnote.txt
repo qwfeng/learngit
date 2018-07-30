@@ -6,7 +6,7 @@ $ pwd               : 显示位置
 $ git init
  
 3.编写目录文件：
-   1.$ git add files.txt  #把文件添加到仓库
+   1.$ git add <file>  #把文件添加到仓库
    2.$ git commit -m "wrote a readme file"   #把文件提交到仓库，“”内的内容为提交时的备注，方便查找改动记录。
 4.文件处理：
    1.$ git status    #查看结果
@@ -19,7 +19,35 @@ $ git init
    5.$ git reset -- hard +commit id关键字      #返回到退回前的版本
    6.$ git reflog     #记录每一次命令
 6.管理修改：
-    1.$ git diff HEAD -- readme.txt     #查看工作区和版本库里面最新版本的区别
+    1.$ git diff HEAD -- <file>     #查看工作区和版本库里面最新版本的区别
 	2.$ git checkout -- <file>...       #把readme.txt文件在工作区的修改全部撤销，
 	3.$ git reset HEAD <file>           #把暂存区的修改撤销掉（unstage），重新放回工作区
-刘梓凉是傻逼
+7.删除文件
+    1.$ rm <file>       #把没用的文件删了
+	2.$ git rm  <file>
+	  $ git commit -m ""     #从版本库中删除文件
+	3.$ git checkout -- <file>      #恢复误删文件
+	
+	刘梓凉是傻逼
+8.在GitHub中创建Git仓库，并进行远程同步。
+    1.在your repositories 中创建repository name     其他默认则创建成功
+	2.将本地的仓库和github仓库并联
+		：$ git remote add origin git@github.com:qwfeng/本地仓库的名字。git
+	3.$ git push origin master    推送你已经提交了的本地仓库中的文件到github中创建的仓库中去
+9.克隆github中的文件到本地
+	1.在github中找到目的仓库
+	2.$ git clone "git@github.com:qwfeng/库名.git" (目的仓库地址)
+10.创建与合并分支
+Git鼓励大量使用分支：
+
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
