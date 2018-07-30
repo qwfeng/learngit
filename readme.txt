@@ -4,4 +4,3 @@ Git has mutable index called stage.
 wo shi wangfeng
 git tracks changes of files.
 My stupid boss  still prefers SVN.
-ni zhen pi
